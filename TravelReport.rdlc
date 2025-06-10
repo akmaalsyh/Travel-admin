@@ -8,21 +8,21 @@
             <TablixCornerRow>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox11">
+                  <Textbox Name="Textbox1">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>id pelanggan</Value>
+                            <Value>id reservasi</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox11</rd:DefaultName>
+                    <rd:DefaultName>Textbox1</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -66,21 +66,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nama">
+                    <Textbox Name="NamaPelanggan">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nama.Value</Value>
+                              <Value>=Fields!NamaPelanggan.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nama</rd:DefaultName>
+                      <rd:DefaultName>NamaPelanggan</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -251,16 +251,6 @@
         <TablixColumnHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="id_pelanggan">
-                <GroupExpressions>
-                  <GroupExpression>=Fields!id_pelanggan.Value</GroupExpression>
-                </GroupExpressions>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!id_pelanggan.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <TablixHeader>
                 <Size>0.6cm</Size>
                 <CellContents>
@@ -271,7 +261,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Nama</Value>
+                            <Value>NamaPelanggan</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
@@ -463,34 +453,34 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="id_pelanggan1">
+              <Group Name="id_reservasi">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!id_pelanggan.Value</GroupExpression>
+                  <GroupExpression>=Fields!id_reservasi.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!id_pelanggan.Value</Value>
+                  <Value>=Fields!id_reservasi.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
                 <Size>2.5cm</Size>
                 <CellContents>
-                  <Textbox Name="id_pelanggan2">
+                  <Textbox Name="id_reservasi1">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!id_pelanggan.Value</Value>
+                            <Value>=Fields!id_reservasi.Value</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>id_pelanggan2</rd:DefaultName>
+                    <rd:DefaultName>id_reservasi1</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -522,7 +512,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.6231in</Width>
+  <Width>8.26568in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -550,14 +540,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="id_pelanggan">
-          <DataField>id_pelanggan</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="nama">
-          <DataField>nama</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="tujuan">
           <DataField>tujuan</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -577,6 +559,14 @@
         <Field Name="total_harga">
           <DataField>total_harga</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="id_reservasi">
+          <DataField>id_reservasi</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NamaPelanggan">
+          <DataField>NamaPelanggan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

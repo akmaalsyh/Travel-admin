@@ -279,10 +279,6 @@ namespace Travel {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnid_pelanggan;
-            
-            private global::System.Data.DataColumn columnnama;
-            
             private global::System.Data.DataColumn columntujuan;
             
             private global::System.Data.DataColumn columntanggal;
@@ -292,6 +288,10 @@ namespace Travel {
             private global::System.Data.DataColumn columnjumlah_tiket;
             
             private global::System.Data.DataColumn columntotal_harga;
+            
+            private global::System.Data.DataColumn columnid_reservasi;
+            
+            private global::System.Data.DataColumn columnNamaPelanggan;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -324,22 +324,6 @@ namespace Travel {
             protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_pelangganColumn {
-                get {
-                    return this.columnid_pelanggan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn namaColumn {
-                get {
-                    return this.columnnama;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -384,6 +368,22 @@ namespace Travel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_reservasiColumn {
+                get {
+                    return this.columnid_reservasi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NamaPelangganColumn {
+                get {
+                    return this.columnNamaPelanggan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,16 +419,16 @@ namespace Travel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string nama, string tujuan, System.DateTime tanggal, System.TimeSpan waktu, int jumlah_tiket, decimal total_harga) {
+            public DataTable1Row AddDataTable1Row(string tujuan, System.DateTime tanggal, System.TimeSpan waktu, int jumlah_tiket, decimal total_harga, string NamaPelanggan) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        nama,
                         tujuan,
                         tanggal,
                         waktu,
                         jumlah_tiket,
-                        total_harga};
+                        total_harga,
+                        null,
+                        NamaPelanggan};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -436,9 +436,9 @@ namespace Travel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row FindByid_pelanggan(int id_pelanggan) {
+            public DataTable1Row FindByid_reservasi(int id_reservasi) {
                 return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            id_pelanggan})));
+                            id_reservasi})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -458,22 +458,18 @@ namespace Travel {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid_pelanggan = base.Columns["id_pelanggan"];
-                this.columnnama = base.Columns["nama"];
                 this.columntujuan = base.Columns["tujuan"];
                 this.columntanggal = base.Columns["tanggal"];
                 this.columnwaktu = base.Columns["waktu"];
                 this.columnjumlah_tiket = base.Columns["jumlah_tiket"];
                 this.columntotal_harga = base.Columns["total_harga"];
+                this.columnid_reservasi = base.Columns["id_reservasi"];
+                this.columnNamaPelanggan = base.Columns["NamaPelanggan"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_pelanggan = new global::System.Data.DataColumn("id_pelanggan", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_pelanggan);
-                this.columnnama = new global::System.Data.DataColumn("nama", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnama);
                 this.columntujuan = new global::System.Data.DataColumn("tujuan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntujuan);
                 this.columntanggal = new global::System.Data.DataColumn("tanggal", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -484,17 +480,21 @@ namespace Travel {
                 base.Columns.Add(this.columnjumlah_tiket);
                 this.columntotal_harga = new global::System.Data.DataColumn("total_harga", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal_harga);
+                this.columnid_reservasi = new global::System.Data.DataColumn("id_reservasi", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_reservasi);
+                this.columnNamaPelanggan = new global::System.Data.DataColumn("NamaPelanggan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNamaPelanggan);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_pelanggan}, true));
-                this.columnid_pelanggan.AutoIncrement = true;
-                this.columnid_pelanggan.AutoIncrementSeed = -1;
-                this.columnid_pelanggan.AutoIncrementStep = -1;
-                this.columnid_pelanggan.AllowDBNull = false;
-                this.columnid_pelanggan.ReadOnly = true;
-                this.columnid_pelanggan.Unique = true;
-                this.columnnama.MaxLength = 25;
+                                this.columnid_reservasi}, true));
                 this.columntujuan.MaxLength = 100;
                 this.columntotal_harga.AllowDBNull = false;
+                this.columnid_reservasi.AutoIncrement = true;
+                this.columnid_reservasi.AutoIncrementSeed = -1;
+                this.columnid_reservasi.AutoIncrementStep = -1;
+                this.columnid_reservasi.AllowDBNull = false;
+                this.columnid_reservasi.ReadOnly = true;
+                this.columnid_reservasi.Unique = true;
+                this.columnNamaPelanggan.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -637,33 +637,6 @@ namespace Travel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_pelanggan {
-                get {
-                    return ((int)(this[this.tableDataTable1.id_pelangganColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.id_pelangganColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nama {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.namaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nama\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.namaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string tujuan {
                 get {
                     try {
@@ -739,14 +712,29 @@ namespace Travel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsnamaNull() {
-                return this.IsNull(this.tableDataTable1.namaColumn);
+            public int id_reservasi {
+                get {
+                    return ((int)(this[this.tableDataTable1.id_reservasiColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.id_reservasiColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetnamaNull() {
-                this[this.tableDataTable1.namaColumn] = global::System.Convert.DBNull;
+            public string NamaPelanggan {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.NamaPelangganColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NamaPelanggan\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.NamaPelangganColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -795,6 +783,18 @@ namespace Travel {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setjumlah_tiketNull() {
                 this[this.tableDataTable1.jumlah_tiketColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNamaPelangganNull() {
+                return this.IsNull(this.tableDataTable1.NamaPelangganColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNamaPelangganNull() {
+                this[this.tableDataTable1.NamaPelangganColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -957,13 +957,13 @@ namespace Travel.TravelDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("id_pelanggan", "id_pelanggan");
-            tableMapping.ColumnMappings.Add("nama", "nama");
             tableMapping.ColumnMappings.Add("tujuan", "tujuan");
             tableMapping.ColumnMappings.Add("tanggal", "tanggal");
             tableMapping.ColumnMappings.Add("waktu", "waktu");
             tableMapping.ColumnMappings.Add("jumlah_tiket", "jumlah_tiket");
             tableMapping.ColumnMappings.Add("total_harga", "total_harga");
+            tableMapping.ColumnMappings.Add("id_reservasi", "id_reservasi");
+            tableMapping.ColumnMappings.Add("NamaPelanggan", "NamaPelanggan");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -980,9 +980,11 @@ namespace Travel.TravelDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT p.id_pelanggan, p.nama, j.tujuan, j.tanggal, j.waktu, r.jumlah_tiket, r.to" +
-                "tal_harga\r\nFROM     pelanggan AS p CROSS JOIN\r\n                  jadwal AS j INN" +
-                "ER JOIN\r\n                  reservasi AS r ON p.id_pelanggan = r.id_pelanggan";
+            this._commandCollection[0].CommandText = @"SELECT r.id_reservasi, p.nama AS NamaPelanggan, j.tujuan, j.tanggal, j.waktu, r.jumlah_tiket, r.total_harga
+FROM     reservasi AS r INNER JOIN
+                  pelanggan AS p ON r.id_pelanggan = p.id_pelanggan INNER JOIN
+                  jadwal AS j ON r.id_jadwal = j.id_jadwal
+ORDER BY r.id_reservasi";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

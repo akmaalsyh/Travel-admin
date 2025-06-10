@@ -49,100 +49,90 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            // System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mobil)); // Baris ini biasanya dibuat otomatis oleh designer dengan typeof(mobil)
-            ttujuan = new System.Windows.Forms.TextBox(); // Fully qualify to avoid ambiguity if 'using' is not perfect
-            ttanggal = new System.Windows.Forms.DateTimePicker();
-            twaktu = new System.Windows.Forms.TextBox();
-            tkapasitas = new System.Windows.Forms.TextBox();
-            tmerk = new System.Windows.Forms.TextBox();
-            tmodel = new System.Windows.Forms.TextBox();
-            tplat = new System.Windows.Forms.TextBox();
-            tstatus = new System.Windows.Forms.ComboBox();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
-            btnTambah = new System.Windows.Forms.Button();
-            btnUpdate = new System.Windows.Forms.Button();
-            btnDelete = new System.Windows.Forms.Button();
-            btnRefresh = new System.Windows.Forms.Button();
-            tharga = new System.Windows.Forms.TextBox();
-            btnImport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit(); // Use 'this' for clarity
+            this.ttujuan = new System.Windows.Forms.TextBox();
+            this.ttanggal = new System.Windows.Forms.DateTimePicker();
+            this.twaktu = new System.Windows.Forms.TextBox();
+            this.tkapasitas = new System.Windows.Forms.TextBox();
+            this.tmerk = new System.Windows.Forms.TextBox();
+            this.tmodel = new System.Windows.Forms.TextBox();
+            this.tplat = new System.Windows.Forms.TextBox();
+            this.tstatus = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.tharga = new System.Windows.Forms.TextBox();
+            this.btnImport = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ttujuan
             // 
             this.ttujuan.Location = new System.Drawing.Point(27, 167);
             this.ttujuan.Name = "ttujuan";
-            this.ttujuan.Size = new System.Drawing.Size(200, 23);
+            this.ttujuan.Size = new System.Drawing.Size(200, 22);
             this.ttujuan.TabIndex = 0;
-            this.ttujuan.Text = "tujuan"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.ttujuan.PlaceholderText = "Tujuan";
+            this.ttujuan.Text = "tujuan";
             // 
             // ttanggal
             // 
             this.ttanggal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ttanggal.Location = new System.Drawing.Point(27, 53);
             this.ttanggal.Name = "ttanggal";
-            this.ttanggal.Size = new System.Drawing.Size(200, 23);
+            this.ttanggal.Size = new System.Drawing.Size(200, 22);
             this.ttanggal.TabIndex = 1;
             // 
             // twaktu
             // 
             this.twaktu.Location = new System.Drawing.Point(27, 24);
             this.twaktu.Name = "twaktu";
-            this.twaktu.Size = new System.Drawing.Size(200, 23);
+            this.twaktu.Size = new System.Drawing.Size(200, 22);
             this.twaktu.TabIndex = 2;
-            this.twaktu.Text = "waktu"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.twaktu.PlaceholderText = "HH:mm";
+            this.twaktu.Text = "waktu";
             // 
             // tkapasitas
             // 
             this.tkapasitas.Location = new System.Drawing.Point(27, 138);
             this.tkapasitas.Name = "tkapasitas";
-            this.tkapasitas.Size = new System.Drawing.Size(200, 23);
+            this.tkapasitas.Size = new System.Drawing.Size(200, 22);
             this.tkapasitas.TabIndex = 3;
-            this.tkapasitas.Text = "kapasitas"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.tkapasitas.PlaceholderText = "Kapasitas";
+            this.tkapasitas.Text = "kapasitas";
             // 
             // tmerk
             // 
             this.tmerk.Location = new System.Drawing.Point(27, 225);
             this.tmerk.Name = "tmerk";
-            this.tmerk.Size = new System.Drawing.Size(200, 23);
+            this.tmerk.Size = new System.Drawing.Size(200, 22);
             this.tmerk.TabIndex = 4;
-            this.tmerk.Text = "merek"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.tmerk.PlaceholderText = "Merk";
+            this.tmerk.Text = "merek";
             // 
             // tmodel
             // 
             this.tmodel.Location = new System.Drawing.Point(27, 82);
             this.tmodel.Name = "tmodel";
-            this.tmodel.Size = new System.Drawing.Size(200, 23);
+            this.tmodel.Size = new System.Drawing.Size(200, 22);
             this.tmodel.TabIndex = 5;
-            this.tmodel.Text = "model"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.tmodel.PlaceholderText = "Model";
+            this.tmodel.Text = "model";
             // 
             // tplat
             // 
             this.tplat.Location = new System.Drawing.Point(27, 196);
             this.tplat.Name = "tplat";
-            this.tplat.Size = new System.Drawing.Size(200, 23);
+            this.tplat.Size = new System.Drawing.Size(200, 22);
             this.tplat.TabIndex = 6;
-            this.tplat.Text = "plat"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.tplat.PlaceholderText = "Plat Nomor";
+            this.tplat.Text = "plat";
             // 
             // tstatus
             // 
             this.tstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tstatus.Items.AddRange(new object[] { "tersedia", "penuh", "batal" }); // Ini akan menjadi item awal di designer
+            this.tstatus.Items.AddRange(new object[] {
+            "tersedia",
+            "penuh",
+            "batal"});
             this.tstatus.Location = new System.Drawing.Point(345, 138);
             this.tstatus.Name = "tstatus";
-            this.tstatus.Size = new System.Drawing.Size(121, 23);
+            this.tstatus.Size = new System.Drawing.Size(121, 24);
             this.tstatus.TabIndex = 7;
             // 
             // dataGridView1
@@ -151,7 +141,7 @@ namespace Travel
             this.dataGridView1.Location = new System.Drawing.Point(472, 12);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51; // Standard row header width
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(240, 338);
             this.dataGridView1.TabIndex = 8;
@@ -201,11 +191,9 @@ namespace Travel
             // 
             this.tharga.Location = new System.Drawing.Point(27, 109);
             this.tharga.Name = "tharga";
-            this.tharga.Size = new System.Drawing.Size(200, 23);
+            this.tharga.Size = new System.Drawing.Size(200, 22);
             this.tharga.TabIndex = 13;
-            this.tharga.Text = "harga"; // Default text for designer view
-            // If targeting .NET 5+ or higher, you can use PlaceholderText
-            // this.tharga.PlaceholderText = "Harga";
+            this.tharga.Text = "harga";
             // 
             // btnImport
             // 
@@ -215,11 +203,11 @@ namespace Travel
             this.btnImport.TabIndex = 14;
             this.btnImport.Text = "Import Excel";
             this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click); // Pastikan ada event handler ini di mobil.cs
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // mobil
             // 
-            this.ClientSize = new System.Drawing.Size(724, 376); // Ukuran form
+            this.ClientSize = new System.Drawing.Size(724, 376);
             this.Controls.Add(this.ttujuan);
             this.Controls.Add(this.ttanggal);
             this.Controls.Add(this.twaktu);
@@ -228,15 +216,15 @@ namespace Travel
             this.Controls.Add(this.tmodel);
             this.Controls.Add(this.tplat);
             this.Controls.Add(this.tstatus);
-            this.Controls.Add(this.tharga); // Pastikan ini ditambahkan ke Controls
+            this.Controls.Add(this.tharga);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnImport); // Pastikan ini ditambahkan ke Controls
+            this.Controls.Add(this.btnImport);
             this.Name = "mobil";
-            this.Text = "Form Jadwal Mobil"; // Judul form
+            this.Text = "Form Jadwal Mobil";
             this.Load += new System.EventHandler(this.mobil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -35,20 +35,22 @@ namespace Travel
         private void SetupReportViewer()
         {
             string query = @"
-            SELECT 
-                p.id_pelanggan, 
-                p.nama, 
-                j.tujuan, 
-                j.tanggal, 
-                j.waktu, 
-                r.jumlah_tiket, 
+            SELECT
+                r.id_reservasi,
+                p.nama AS NamaPelanggan,
+                j.tujuan,
+                j.tanggal,
+                j.waktu,
+                r.jumlah_tiket,
                 r.total_harga
-            FROM     
-                pelanggan AS p 
-            CROSS JOIN
-                jadwal AS j 
+            FROM
+                reservasi AS r
             INNER JOIN
-                  reservasi AS r ON p.id_pelanggan = r.id_pelanggan"; // Ganti dengan query yang sesuai untuk laporan Anda
+                pelanggan AS p ON r.id_pelanggan = p.id_pelanggan
+            INNER JOIN
+                jadwal AS j ON r.id_jadwal = j.id_jadwal
+            ORDER BY
+                r.id_reservasi;"; // Ganti dengan query yang sesuai untuk laporan Anda
 
             DataTable dt = new DataTable();
             
@@ -354,6 +356,11 @@ namespace Travel
         private void cbPelanggan_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Tidak ada perubahan yang diperlukan di sini untuk SQL Server
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

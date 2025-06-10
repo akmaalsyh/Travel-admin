@@ -32,6 +32,7 @@ namespace Travel
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reservasi));
             this.cbPelanggan = new System.Windows.Forms.ComboBox();
             this.cbJadwal = new System.Windows.Forms.ComboBox();
             this.tJumlahTiket = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@ namespace Travel
             // cbPelanggan
             // 
             this.cbPelanggan.FormattingEnabled = true;
-            this.cbPelanggan.Location = new System.Drawing.Point(30, 30);
+            this.cbPelanggan.Location = new System.Drawing.Point(113, 75);
             this.cbPelanggan.Name = "cbPelanggan";
             this.cbPelanggan.Size = new System.Drawing.Size(245, 24);
             this.cbPelanggan.TabIndex = 0;
@@ -58,14 +59,14 @@ namespace Travel
             // cbJadwal
             // 
             this.cbJadwal.FormattingEnabled = true;
-            this.cbJadwal.Location = new System.Drawing.Point(30, 70);
+            this.cbJadwal.Location = new System.Drawing.Point(113, 115);
             this.cbJadwal.Name = "cbJadwal";
             this.cbJadwal.Size = new System.Drawing.Size(245, 24);
             this.cbJadwal.TabIndex = 1;
             // 
             // tJumlahTiket
             // 
-            this.tJumlahTiket.Location = new System.Drawing.Point(30, 110);
+            this.tJumlahTiket.Location = new System.Drawing.Point(113, 155);
             this.tJumlahTiket.Name = "tJumlahTiket";
             this.tJumlahTiket.Size = new System.Drawing.Size(245, 22);
             this.tJumlahTiket.TabIndex = 2;
@@ -73,7 +74,7 @@ namespace Travel
             // 
             // tTotalHarga
             // 
-            this.tTotalHarga.Location = new System.Drawing.Point(30, 150);
+            this.tTotalHarga.Location = new System.Drawing.Point(113, 195);
             this.tTotalHarga.Name = "tTotalHarga";
             this.tTotalHarga.Size = new System.Drawing.Size(245, 22);
             this.tTotalHarga.TabIndex = 3;
@@ -87,7 +88,7 @@ namespace Travel
             "pending",
             "terbayar",
             "dibatalkan"});
-            this.cbStatus.Location = new System.Drawing.Point(30, 190);
+            this.cbStatus.Location = new System.Drawing.Point(113, 235);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(245, 24);
             this.cbStatus.TabIndex = 4;
@@ -95,7 +96,7 @@ namespace Travel
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(296, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(379, 75);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -106,7 +107,7 @@ namespace Travel
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(30, 230);
+            this.btnTambah.Location = new System.Drawing.Point(113, 275);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(75, 31);
             this.btnTambah.TabIndex = 6;
@@ -116,7 +117,7 @@ namespace Travel
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(115, 230);
+            this.btnUpdate.Location = new System.Drawing.Point(191, 275);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 31);
             this.btnUpdate.TabIndex = 7;
@@ -126,7 +127,7 @@ namespace Travel
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(200, 230);
+            this.btnDelete.Location = new System.Drawing.Point(283, 275);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 31);
             this.btnDelete.TabIndex = 8;
@@ -136,7 +137,7 @@ namespace Travel
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(30, 267);
+            this.btnRefresh.Location = new System.Drawing.Point(113, 312);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(245, 37);
             this.btnRefresh.TabIndex = 9;
@@ -146,14 +147,17 @@ namespace Travel
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(30, 321);
+            this.reportViewer1.Location = new System.Drawing.Point(113, 367);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(783, 139);
+            this.reportViewer1.Size = new System.Drawing.Size(783, 174);
             this.reportViewer1.TabIndex = 10;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // reservasi
             // 
-            this.ClientSize = new System.Drawing.Size(836, 512);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1008, 580);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);

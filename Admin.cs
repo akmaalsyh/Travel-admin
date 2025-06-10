@@ -221,5 +221,9 @@ namespace Travel
             }
         }
 
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
